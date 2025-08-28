@@ -1,0 +1,388 @@
+:root{
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f5f7fa;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --card-color: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+    --light-text: #7f8c8d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Increased max-width to accommodate the new section */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    /* Existing logo styles */
+}
+
+h1 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--light-text);
+}
+
+/* Navigation bar styling */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #2980b9;
+}
+
+/* New main content layout */
+.main-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.calculator-container {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 2; /* Give the calculator more space */
+}
+
+/* New Quick Links container styling */
+.quick-links-container {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Make it take up less space */
+    min-width: 250px;
+}
+
+.university-tabs-link {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Make it take up less space */
+    min-width: 250px;
+}
+
+.quick-links-container h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.quick-links-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links-container li {
+    margin-bottom: 0.75rem;
+}
+
+.quick-links-container a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.quick-links-container a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* Form and input styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.add-course-btn,
+.calculate-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 1rem;
+}
+
+.add-course-btn:hover,
+.calculate-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.add-course-btn:active,
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+/* Course input group styles */
+.course-input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-end; /* Align items to the bottom */
+}
+
+.course-input-group .form-group {
+    flex: 1;
+    margin-bottom: 0; /* Remove margin from individual form groups */
+}
+
+.course-input-group .form-group:first-child {
+    flex: 1; /* Subject name field */
+}
+
+.course-input-group .form-group:nth-child(2) {
+    flex: 0.5; /* Credit hours field, smaller */
+}
+
+.course-input-group .form-group:nth-child(3) {
+    flex: 0.5; /* Grade dropdown, smaller */
+}
+
+
+.delete-course-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-course-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Result section styles */
+.result-container {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide by default */
+}
+
+.result-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.result-cgpa {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+}
+
+.result-description {
+    font-style: italic;
+    color: var(--light-text);
+    margin-top: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .container {
+        max-width: 900px;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-right {
+        margin-top: 1rem;
+    }
+}
+
+/* University tabs section styling */
+.university-tabs-container {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.university-tabs-container h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.university-tabs-container p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+}
+
+.university-table-wrapper {
+    overflow-x: auto;
+}
+
+.university-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.university-table th,
+.university-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.university-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.university-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.university-tab-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.university-tab-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.pakistan-flag {
+    display: block;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
