@@ -1,0 +1,9 @@
+aerosenergy-cgpa-calculator/
+├── public/
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── aerosenergy-logo.png
+├── server.js
+├── package.json
+└── README.md
